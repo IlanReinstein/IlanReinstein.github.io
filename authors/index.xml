@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors | I. Reinstein</title>
+    <title>Authors | Ilan Reinstein</title>
     <link>/authors/</link>
       <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
@@ -17,7 +17,7 @@
       <link>/authors/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;I am a Research Scientist at NYU Grossman School of Medicine, where I do research to assess and improve the quality of our education program. I apply different statistical tools like machine learning to our data and most recently, I started exploring tools like Stan and PyMC3 and their potential applications to our research. I am very interested in Bayesian Inference, Probabilistic Computing and Machine Learning, and in this blog I present my learning path through a series of data stories using open data from whatever topic catches my interest. Every now and then I may also post musical recommendations that I like playing while coding these stories.&lt;/p&gt;
+      <description>&lt;p&gt;In my line of work I conduct research in medical education and learning analytics. I get to apply different statistical methods to various research questions that seek to improve the quality of education at NYU School of Medicine. I am interested in the applications of Bayesian Inference, Probabilistic Modeling, and Machine Learning to these problems, but I am also intrigued by the potential applications of robust modeling practices in other areas like energy, health, and so many more that I have yet to discover.&lt;/p&gt;
 </description>
     </item>
     
