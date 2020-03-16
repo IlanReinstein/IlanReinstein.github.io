@@ -18,6 +18,26 @@
   </url>
   
   <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-03-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/kaggle-survey-2019-latin-america-ml-community/</loc>
+    <lastmod>2020-03-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/</loc>
+    <lastmod>2020-03-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/projects/</loc>
+    <lastmod>2020-03-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/content-machine-learning/</loc>
     <lastmod>2020-03-11T20:22:51-04:00</lastmod>
   </url>
@@ -68,10 +88,6 @@
   
   <url>
     <loc>/authors/</loc>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
   </url>
   
   <url>
