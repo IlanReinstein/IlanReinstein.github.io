@@ -5,12 +5,56 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 11 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>Resources to Learn Bayesian Stats</title>
+      <link>/post/resources-to-learn-bayesian-stats/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>/post/resources-to-learn-bayesian-stats/</guid>
+      <description>&lt;p&gt;In this post, I summarize a series of resources to get started with Bayesian Statistics. I compiled these references myself based on my own experience and opinion as to what a good introduction and next steps are in this process. This is not an academic curriculum or anything tremendously rigorous, but it is a comprehensive list that will surely get you embarked on the journey to revisiting/starting your statistics.&lt;/p&gt;
+&lt;p&gt;The first and most important resource out there for anyone interested in Bayesian statistics and modeling is Richard McElreath’s 
+&lt;a href=&#34;https://xcelab.net/rm/statistical-rethinking/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Statistical Rethinking&lt;/a&gt;
+. Here you’ll learn everything from applying Bayes’ rule in simple problems to complex multilevel/hierarchical models. You can also access and follow the 
+&lt;a href=&#34;https://www.youtube.com/playlist?list=PLDcUM9US4XdNM4Edgs7weiyIguLSToZRI&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;course&amp;rsquo;s lectures on YouTube&lt;/a&gt;
+. Lastly, I would encourage you to work through the code and exercises at the end of each chapter. A great thing about this is that the book’s R package and code has been translated into multiple programming languages, so you are free to choose the one of your preference.&lt;/p&gt;
+&lt;p&gt;Another powerful reference for those that feel like brushing up your stats with real-world examples, Andrew Gelman and Jennifer Hill’s 
+&lt;a href=&#34;http://www.stat.columbia.edu/~gelman/arm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data Analysis Using Regression and Multilevel/Hierarchical Models&lt;/a&gt;
+ is a fantastic book for those with more interest on Applied Statistics on a social science setting. An updated version of this book is called 
+&lt;a href=&#34;https://avehtari.github.io/ROS-Examples/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Regression and Other Stories&lt;/a&gt;
+ (Andrew Gelman, Jennifer Hill, Aki Vehtari) and it will be released later this year.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;d like to work through another more advanced course on Bayesian Statistics, I suggest you visit 
+&lt;a href=&#34;https://github.com/avehtari/BDA_course_Aalto&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Aki Vehtari’s teaching page&lt;/a&gt;
+. This course is a bit more advanced than McElreath&amp;rsquo;s but it is worth checking it out. Again, the course material is available in R and Python.&lt;/p&gt;
+&lt;p&gt;Now, you’ve refreshed your basic stats and gone through most of McElreath’s book, but you are also very interested in Machine Learning (ML). You may wonder, where should I go? What to do next? Challenge yourself to read Christopher Bishop’s 
+&lt;a href=&#34;https://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;
+. Bishop’s book presents all the well known ML concepts from regression and classification to neural networks from a Bayesian perspective. I have found this book tremendously useful now that I have a basic understanding of Bayesian statistics, in fact it is fair to say that I&amp;rsquo;ve strengthen my knowledge just by working through the first chapters of this book. I highly recommend it, althogh but keep in mind this is an advanced book and it takes some time to get your head around the concepts.&lt;/p&gt;
+&lt;p&gt;At the same level as Bishop’s book, you can also find a rigorous and detailed explanation of Bayesian statistics and modeling on 
+&lt;a href=&#34;http://www.inference.org.uk/mackay/itila/book.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;David MacKay’s Information Theory, Inference, and Learning Algorithms&lt;/a&gt;
+. I was fortunate enough to use this book in college, so I hold it very dearly when I want to revisit some probability concepts. The book&amp;rsquo;s webpage also provides software resources and examples to experiment and play around as you navigate the text.&lt;/p&gt;
+&lt;p&gt;Whenever you feel comfortable enough with the basics to go deeper into the math and the theoretical concepts behind probabilistic modeling, probabilistic computation and applied Bayesian Statistics I strongly encourage you to read ALL of 
+&lt;a href=&#34;https://betanalpha.github.io/writing/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Michael Betancourt’s case studies&lt;/a&gt;
+ in due order. This will be challenging to grasp at first, but as you revisit the content and if really dedicate the time to understand these concepts, the reward is huge.&lt;/p&gt;
+&lt;p&gt;For those that like to listen to stories about practitioners and people applying Bayesian statistics to their fields I strongly advise that you check out Alexandre Andorra&amp;rsquo;s podcast Learning Bayesian Statistics. Alex does an amazing job at interviewing professionals from a wide variety of fields, with incredibly diverse backgrounds and experiences, hence introducing you to the vast universe of applications of Bayesian statistics.&lt;/p&gt;
+&lt;p&gt;One final thing that it is a hard requirement and a common thread between the references and resources listed above is Markov Chain Monte Carlo (MCMC). In order to fully explore probability spaces and distributions you need efficient methods like MCMC and other more advanced variants. Today, many programming languages are capable of implementing such advanced estimation method but the most popular are 1) 
+&lt;a href=&#34;https://mc-stan.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stan&lt;/a&gt;
+, which is built on C++ and has multiple interfaces to R (
+&lt;a href=&#34;http://mc-stan.org/rstanarm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rstanarm&lt;/a&gt;
+, 
+&lt;a href=&#34;https://paul-buerkner.github.io/brms/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;brms&lt;/a&gt;
+), Python (
+&lt;a href=&#34;https://pystan.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyStan&lt;/a&gt;
+), Julia and others; and 2) 
+&lt;a href=&#34;https://docs.pymc.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyMC3&lt;/a&gt;
+. If you are interested in learning the basics you may visit their webpages to see examples with code.&lt;/p&gt;
+&lt;p&gt;Some personal remarks on my own journey through Bayesian Statistics. This topic is not easy, and it is not very often that you hear about the success stories of Bayesian methods in industry, specially nowadays against the huge amount of attention on ML and AI. Nevertheless, I’ve noticed an important step forward in my learning path of analytics and ML by trying to apply Bayesian methods to my own work. For me, its fundamentals are more intuitive and transparent, and overall simpler to grasp (at least conceptually), but considerably harder to apply.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Content on Machine Learning</title>
