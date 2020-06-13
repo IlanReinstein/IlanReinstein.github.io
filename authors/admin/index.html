@@ -202,6 +202,42 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=true"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'true', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -624,8 +660,8 @@
     
     
 
-    <p>I am a researcher at NYU School of Medicine, primarily focused on medical education and learning analytics. As part of my research, I get to apply different statistical methods to various questions around education quality and educational outcomes.</p>
-<p>I am interested in the applications of Bayesian Inference, Probabilistic Modeling, and Machine Learning to these problems, but I am also intrigued by the potential applications of robust modeling practices in other areas like energy, health, and so many more that I have yet to discover.</p>
+    <p>I am a researcher at NYU School of Medicine, primarily focused on medical education and learning analytics. On my research, I get to apply different statistical methods to various questions around education quality and educational outcomes. I also collaborate with other teams as a data consultant to solve problems on data collection and processing, data visualization, and report automation.</p>
+<p>I am interested in the applications of Bayesian Inference, Probabilistic Modeling, and Machine Learning to these problems, but I am also intrigued by the potential applications of robust modeling practices to other areas like energy, health, and so many more that I have yet to discover.</p>
 
 
     <div class="row">

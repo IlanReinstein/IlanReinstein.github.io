@@ -202,6 +202,42 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=true"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'true', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -666,7 +702,7 @@
 <a href="https://avehtari.github.io/ROS-Examples/" target="_blank" rel="noopener">Regression and Other Stories</a>
  (Andrew Gelman, Jennifer Hill, Aki Vehtari) and it will be released later this year. If you&rsquo;d like to work through another more advanced course on Bayesian Statistics, I suggest you visit 
 <a href="https://github.com/avehtari/BDA_course_Aalto" target="_blank" rel="noopener">Aki Vehtari’s teaching page</a>
-. This course is a bit more advanced than McElreath&rsquo;s but it is worth checking it out. Again, the course material is available in R and Python.</p>
+. Although more challengin than McElreath&rsquo;s class it is worth checking it out. Again, the course material is available in R and Python.</p>
 <p>Now, you’ve refreshed your basic stats and gone through most of McElreath’s book, but you are also looking into ML. You may wonder, where should I go? What to do next? Challenge yourself to read Christopher Bishop’s 
 <a href="https://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738" target="_blank" rel="noopener">Pattern Recognition and Machine Learning</a>
 . Bishop’s book presents all the well known ML concepts from regression and classification to neural networks through a concealed Bayesian lense. It is fair to say that I&rsquo;ve deeply strengthen my knowledge in both ML and Bayesian statistics just by working through the first chapters. Although I highly recommend it, keep in mind this is an advanced book and it takes some time to get your head around the concepts.</p>

@@ -73,7 +73,7 @@
 &lt;a href=&#34;https://avehtari.github.io/ROS-Examples/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Regression and Other Stories&lt;/a&gt;
  (Andrew Gelman, Jennifer Hill, Aki Vehtari) and it will be released later this year. If you&amp;rsquo;d like to work through another more advanced course on Bayesian Statistics, I suggest you visit 
 &lt;a href=&#34;https://github.com/avehtari/BDA_course_Aalto&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Aki Vehtari’s teaching page&lt;/a&gt;
-. This course is a bit more advanced than McElreath&amp;rsquo;s but it is worth checking it out. Again, the course material is available in R and Python.&lt;/p&gt;
+. Although more challengin than McElreath&amp;rsquo;s class it is worth checking it out. Again, the course material is available in R and Python.&lt;/p&gt;
 &lt;p&gt;Now, you’ve refreshed your basic stats and gone through most of McElreath’s book, but you are also looking into ML. You may wonder, where should I go? What to do next? Challenge yourself to read Christopher Bishop’s 
 &lt;a href=&#34;https://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;
 . Bishop’s book presents all the well known ML concepts from regression and classification to neural networks through a concealed Bayesian lense. It is fair to say that I&amp;rsquo;ve deeply strengthen my knowledge in both ML and Bayesian statistics just by working through the first chapters. Although I highly recommend it, keep in mind this is an advanced book and it takes some time to get your head around the concepts.&lt;/p&gt;
