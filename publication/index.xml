@@ -5,12 +5,21 @@
     <link>/publication/</link>
       <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 21 Oct 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Publications</title>
       <link>/publication/</link>
     </image>
+    
+    <item>
+      <title>Learning Curves and Multilevel Models</title>
+      <link>/publication/learning-curves-multilevel-models/</link>
+      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/learning-curves-multilevel-models/</guid>
+      <description>&lt;p&gt;The purpose of this project is to build an adaptive learning algorithm that uses learner-specific responses to generate predictions and next-item-recommendations on a next item conditioned on the learner&amp;rsquo;s ability.&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

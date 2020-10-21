@@ -18,6 +18,26 @@
   </url>
   
   <url>
+    <loc>/project/ecg-learning-curves/</loc>
+    <lastmod>2020-10-21T19:24:22-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/learning-curves-multilevel-models/</loc>
+    <lastmod>2020-10-21T19:19:22-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/</loc>
+    <lastmod>2020-10-21T19:24:22-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2020-10-21T19:19:22-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
     <lastmod>2020-06-09T19:57:38-04:00</lastmod>
   </url>
@@ -34,11 +54,6 @@
   
   <url>
     <loc>/project/kaggle-survey-2019-latin-america-ml-community/</loc>
-    <lastmod>2020-03-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/</loc>
     <lastmod>2020-03-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -97,10 +112,6 @@
   
   <url>
     <loc>/publication_types/</loc>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
   </url>
   
   <url>
