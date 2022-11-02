@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP | Ilan Reinstein</title>
+    <link>https://ilanreinstein.github.io/tag/nlp/</link>
+      <atom:link href="https://ilanreinstein.github.io/tag/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <description>NLP</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 02 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ilanreinstein.github.io/media/icon_hub1d11bc70e03781f784a7270814f1676_20092_512x512_fill_lanczos_center_3.png</url>
+      <title>NLP</title>
+      <link>https://ilanreinstein.github.io/tag/nlp/</link>
+    </image>
+    
+    <item>
+      <title>NoteSense: Automated Assessment of Clinical Documentation</title>
+      <link>https://ilanreinstein.github.io/publication/notesense-clinical-documentation/</link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://ilanreinstein.github.io/publication/notesense-clinical-documentation/</guid>
+      <description>&lt;p&gt;Residents receive infrequent feedback on their clinical reasoning (CR) documentation. While machine learning (ML) and natural language processing (NLP) have been used to assess CR documentation in standardized cases, no studies have described similar use in the clinical environment.&lt;/p&gt;
+&lt;p&gt;The authors developed and validated using Kane’s framework a ML model for automated assessment of CR documentation quality in residents’ admission notes.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
