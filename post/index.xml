@@ -5,12 +5,26 @@
     <link>https://ilanreinstein.github.io/post/</link>
       <atom:link href="https://ilanreinstein.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 02 Nov 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ilanreinstein.github.io/media/icon_hub1d11bc70e03781f784a7270814f1676_20092_512x512_fill_lanczos_center_3.png</url>
       <title>Posts</title>
       <link>https://ilanreinstein.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>My Journey in Data Science...</title>
+      <link>https://ilanreinstein.github.io/post/my-journey-in-data-science/</link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://ilanreinstein.github.io/post/my-journey-in-data-science/</guid>
+      <description>&lt;p&gt;Over the past few months, I have given multiple talks and participated in forums discussing my professional trajectory and my experience as a data scientist. In this post I will try to compile my path and give a few tips into how I think one may break into data science and analytics. This is not a novel guide, nor a comprehensive path to break into data science, but I think I&amp;rsquo;ve been exposed to enough to share my story.&lt;/p&gt;
+&lt;h3 id=&#34;from-physics-to-data-science&#34;&gt;From physics to Data Science&lt;/h3&gt;
+&lt;p&gt;When I started my undergraduate degree in physics, I knew I always wanted to do hands-on problem solving. I was undecided on which branch of engineering I should choose to fulfill my career expectations. I thought physics would give enough technical abilities and a broad exposure to science and math to eventually drift towards a more clear path into problem solving in the real world. I was surprised and wrong with how things turned out..&lt;/p&gt;
+&lt;p&gt;During my third and last year of college, I was already fantasizing going into grad school to pursue a PhD in some wacky quantum-focused specialty and problem. This process led me to a lot of frustration: exam preparations, applications, finding schools and potential advisors, you name it. I started to get the feeling this pathway was not very natural to my abilities and my aspirations, I felt like forcing me to do something I was not and that brought me a lot of pain as I felt increasingly under pressure.&lt;/p&gt;
+&lt;p&gt;Luckily, after a few rejections I stopped to rethink my decisions, and I thought that maybe finding a job would be a more fulfilling approach to start growing and learning new skills. I started contacting my professors, applying to jobs, and connecting with people. To my surprise, just after a few weeks after graduating, I already had multiple interviews in different sectors. This process slowly but surely presented me with opportunities and potential paths to follow in my career as a problem solver. Over the multiple interviews, I heard words like Big Data, Data Science, Machine Learning, etc. I was thrilled. I thought this was an interesting opening worth diving into and it was then in 2014 when I managed to &amp;lsquo;break into data science&amp;rsquo;.&lt;/p&gt;
+&lt;h3 id=&#34;early-experiences&#34;&gt;Early experiences&lt;/h3&gt;
+</description>
+    </item>
     
     <item>
       <title>Resources to Learn Bayesian Stats</title>
