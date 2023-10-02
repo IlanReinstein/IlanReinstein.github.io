@@ -11,10 +11,16 @@
     <loc>https://ilanreinstein.github.io/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>https://ilanreinstein.github.io/categories/</loc>
+    <lastmod>2023-09-22T21:22:00-04:00</lastmod>
+  </url><url>
     <loc>https://ilanreinstein.github.io/</loc>
     <lastmod>2023-09-22T21:22:00-04:00</lastmod>
   </url><url>
     <loc>https://ilanreinstein.github.io/project/</loc>
+    <lastmod>2023-09-22T21:22:00-04:00</lastmod>
+  </url><url>
+    <loc>https://ilanreinstein.github.io/category/projects/</loc>
     <lastmod>2023-09-22T21:22:00-04:00</lastmod>
   </url><url>
     <loc>https://ilanreinstein.github.io/project/uber-data-modeling-project/</loc>
@@ -74,13 +80,7 @@
     <loc>https://ilanreinstein.github.io/post/bayesian_resources/resources-to-learn-bayesian-stats/</loc>
     <lastmod>2020-06-09T19:57:38-04:00</lastmod>
   </url><url>
-    <loc>https://ilanreinstein.github.io/categories/</loc>
-    <lastmod>2020-03-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ilanreinstein.github.io/project/kaggle-survey-2019/kaggle-survey-2019-latin-america-ml-community/</loc>
-    <lastmod>2020-03-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ilanreinstein.github.io/category/projects/</loc>
     <lastmod>2020-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ilanreinstein.github.io/post/data-turbulence/content-machine-learning/</loc>
