@@ -5,12 +5,75 @@
     <link>https://ilanreinstein.github.io/tag/machine-learning/</link>
       <atom:link href="https://ilanreinstein.github.io/tag/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>machine learning</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 02 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ilanreinstein.github.io/media/icon_hub1d11bc70e03781f784a7270814f1676_20092_512x512_fill_lanczos_center_3.png</url>
       <title>machine learning</title>
       <link>https://ilanreinstein.github.io/tag/machine-learning/</link>
     </image>
+    
+    <item>
+      <title>Titanic MLOps</title>
+      <link>https://ilanreinstein.github.io/project/titanic-mlops/</link>
+      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://ilanreinstein.github.io/project/titanic-mlops/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;In a previous post, I told you pretty much all my trajectory in the world of data science. For the next series of entries, I&amp;rsquo;d like to stop complaining and rambling and actually do get some work done to share with you and others.&lt;/p&gt;
+&lt;p&gt;One of the hardest things to move onto an engineering role is having the hands-on, practical experience and exposure to the concepts and workflows that are so natural or common to CS and Software folks. As much I try to come up with side additions to my projects at work, delivering results is a priority so there is little room to go deep on certain concepts, so I am at a constant false start on my learning. Luckily, I have established a rich list of people on LinkedIn whose content is very spot on and actually motivational.&lt;/p&gt;
+&lt;p&gt;This project started as a take-home test. I was contacted and decided to give it a shot to see where I am. You guessed right, total failure. However, the right failure at the right time. After realizing how far I was able to advance, I decided to build upon my submission and use what I see daily from experts on LinkedIn to build an actual working pipeline.&lt;/p&gt;
+&lt;h2 id=&#34;project-goals&#34;&gt;Project Goals&lt;/h2&gt;
+&lt;p&gt;To build and expose an endpoint using a pre-trained model. The system should be able to write responses or predictions in a database and it should be packaged as a Docker container. Easy right? Well.. For someone whose experience is focused primarily on batch jobs that rely on a pristine data warehouse this was clearly a step up.&lt;/p&gt;
+&lt;p&gt;Let me walk you through a couple of things I encountered along the way. If any of my takeaways, challenges, or next steps seem off, please do not hesitate to correct me or drop me a line to discuss.&lt;/p&gt;
+&lt;h2 id=&#34;deliverables&#34;&gt;Deliverables&lt;/h2&gt;
+&lt;p&gt;This is a simple first iteration of a personal attempt at creating a ML system from the ground. These are th components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Docker file to run the environment and fire up the API&lt;/li&gt;
+&lt;li&gt;The code for feature processing and predictions&lt;/li&gt;
+&lt;li&gt;A SQLite database that saves requests from the API. Only predictions are stored so far, next would be to keep a cache of &amp;ldquo;historical&amp;rdquo; features. Recall this is the Titanic competition turned into and MLOps project so more data is not available.&lt;/li&gt;
+&lt;li&gt;Basic tests for the feature processing pipeline&lt;/li&gt;
+&lt;li&gt;A failed attempt to draw a Cloud architecture capable of hosting such system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The API works perfect and the database interaction is smooth. As a local Docker container I was able to obtain predictions such that ther would be no duplicate entries. A fancier and more robust way for this database interaction to happen may be nice to have.&lt;/p&gt;
+&lt;h2 id=&#34;challenges&#34;&gt;Challenges&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I am mostly familiar with batch jobs that run on premise as Docker containers.&lt;/li&gt;
+&lt;li&gt;The hardest part was to think about the database interaction. I found it very challenging to try and separate the components of the API along with the database. However, thinking hard about this helped me solidify my understanding of OLAP vs OLTP.&lt;/li&gt;
+&lt;li&gt;The model selected for deployment made it hard to think about scale since it is a static problem from which we cannot get more data for improvement of the model, only more complex feature engineering with the embedded risk of overfitting.&lt;/li&gt;
+&lt;li&gt;Lack of familiarity with API deployment and proper testing of these. Not entirely sure about the proper tests required as part of an API, but feels like a low-hanging-fruit to implement in a next iteration.&lt;/li&gt;
+&lt;li&gt;Understanding the Git Workflow, other than simply creating the branches to add pieces of the application. I could improve my knowledge about collaboration with distributed teams: feature branches that depend on each other, merging strategies, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;takeaways&#34;&gt;Takeaways&lt;/h2&gt;
+&lt;p&gt;I have become a firm believer that in order to learn something well, you need to face it and do it. Reading and watching tutorials will only get you so far. It is amazing how much I got out of this small project and how I can start to think about transitioning more into an MLOps role.&lt;/p&gt;
+&lt;p&gt;In my humble and ignorant opinion, this has nothing to do with ML at all. It took me a few days of working in this project to realize I was doing backend engineering but maybe I&amp;rsquo;m wrong. Yes, the model quality and the data preparation steps are critical to the overall deployment performance of an inference API, but there are so many more components that are not easily taught through classic textbook examples.&lt;/p&gt;
+&lt;p&gt;In addition, many of the evaluation and monitoring of a model are concepts that as far as my experience and knowledge goes, is also a recent topic of research and application. Yes, there are many tools available but as a person trying to grow and learn this only leads to vendor and option anxiety. More and more am I convinced about learning the fundamental concepts first to then go with the tool that suits the needs of the problem.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;I&amp;rsquo;d like to see how this plays out in a Cloud Environment. What are the tools for this? What is a common architecture? How would I handle the costs?
+I have deployed some Docker images for R Shiny applications in the past, but this is a different animal for which the resources available are a bit overwhelming.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I am eager to integrate better tests. Not just unit tests for features but a robust data quality testing strategy, integration tests, etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Implement monitoring of predictions. Again, hard to do in this snapshot data problem but may be a good exercise to try out what sort of metrics I would monitor and how.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Setup a CI/CD with Github actions. I have worked on GitLab for our internal projects and would like to understand how is different.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add the Features to the SQLite database. Although not entirely called for in this small, static dataset project I would be very interested in learning how to engineer Feature Stores for when you need new data daily.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Find a topic of interest or another data set which could be potentially more dynamic to do retraining or model improvement via feature engineering once the infrastructure is setup. This right now seems miles away, I have so many questions on how to do this. Perhaps I should ask a Data Engineer ;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;conclussion&#34;&gt;Conclussion&lt;/h2&gt;
+&lt;p&gt;This last one could be bigger than just that. I&amp;rsquo;d love to be able to choose a problem of my interest and collect some data. But I have to confess, seems a but overwhelming. It is hard to choose a topic. There are many things am interested in but none for which collecting data seems doable. Yes, I could scrape or find APIs, but I am talking about my lack for subject matter expertise on these things so it is difficult to determine common or even relevant questions that a predictive model can solve.&lt;/p&gt;
+&lt;p&gt;Another thing is I don&amp;rsquo;t want to focus so much on models. There are a few things that have come to mind in terms of potential projects, eg. financial data. Currently I&amp;rsquo;m working on another personal project (more focused on Data Engineering) and there is a plenty of data with lots of possibilities. However, I know very little of Time Series and ML and Financial Models, etc. Never to late to learn but for the purpose of learning MLOps feels like a stretch.&lt;/p&gt;
+&lt;p&gt;After working a few weeks on this I am happy to share this journey with you. As I get some free time on my hands I will continue to update and improve on this repo with all things I&amp;rsquo;d like to integrate. In the meantime, I am happy with the result (well, the API works). This is fun and as mentioned above, it is the best way for me to learn about something, trial and error.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>NoteSense: Automated Assessment of Clinical Documentation</title>

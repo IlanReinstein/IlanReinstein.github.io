@@ -5,7 +5,7 @@
     <link>https://ilanreinstein.github.io/</link>
       <atom:link href="https://ilanreinstein.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Ilan Reinstein</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 03 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ilanreinstein.github.io/media/icon_hub1d11bc70e03781f784a7270814f1676_20092_512x512_fill_lanczos_center_3.png</url>
       <title>Ilan Reinstein</title>
@@ -55,11 +55,74 @@
     </item>
     
     <item>
+      <title>Titanic MLOps</title>
+      <link>https://ilanreinstein.github.io/project/titanic-mlops/</link>
+      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://ilanreinstein.github.io/project/titanic-mlops/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;In a previous post, I told you pretty much all my trajectory in the world of data science. For the next series of entries, I&amp;rsquo;d like to stop complaining and rambling and actually do get some work done to share with you and others.&lt;/p&gt;
+&lt;p&gt;One of the hardest things to move onto an engineering role is having the hands-on, practical experience and exposure to the concepts and workflows that are so natural or common to CS and Software folks. As much I try to come up with side additions to my projects at work, delivering results is a priority so there is little room to go deep on certain concepts, so I am at a constant false start on my learning. Luckily, I have established a rich list of people on LinkedIn whose content is very spot on and actually motivational.&lt;/p&gt;
+&lt;p&gt;This project started as a take-home test. I was contacted and decided to give it a shot to see where I am. You guessed right, total failure. However, the right failure at the right time. After realizing how far I was able to advance, I decided to build upon my submission and use what I see daily from experts on LinkedIn to build an actual working pipeline.&lt;/p&gt;
+&lt;h2 id=&#34;project-goals&#34;&gt;Project Goals&lt;/h2&gt;
+&lt;p&gt;To build and expose an endpoint using a pre-trained model. The system should be able to write responses or predictions in a database and it should be packaged as a Docker container. Easy right? Well.. For someone whose experience is focused primarily on batch jobs that rely on a pristine data warehouse this was clearly a step up.&lt;/p&gt;
+&lt;p&gt;Let me walk you through a couple of things I encountered along the way. If any of my takeaways, challenges, or next steps seem off, please do not hesitate to correct me or drop me a line to discuss.&lt;/p&gt;
+&lt;h2 id=&#34;deliverables&#34;&gt;Deliverables&lt;/h2&gt;
+&lt;p&gt;This is a simple first iteration of a personal attempt at creating a ML system from the ground. These are th components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Docker file to run the environment and fire up the API&lt;/li&gt;
+&lt;li&gt;The code for feature processing and predictions&lt;/li&gt;
+&lt;li&gt;A SQLite database that saves requests from the API. Only predictions are stored so far, next would be to keep a cache of &amp;ldquo;historical&amp;rdquo; features. Recall this is the Titanic competition turned into and MLOps project so more data is not available.&lt;/li&gt;
+&lt;li&gt;Basic tests for the feature processing pipeline&lt;/li&gt;
+&lt;li&gt;A failed attempt to draw a Cloud architecture capable of hosting such system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The API works perfect and the database interaction is smooth. As a local Docker container I was able to obtain predictions such that ther would be no duplicate entries. A fancier and more robust way for this database interaction to happen may be nice to have.&lt;/p&gt;
+&lt;h2 id=&#34;challenges&#34;&gt;Challenges&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I am mostly familiar with batch jobs that run on premise as Docker containers.&lt;/li&gt;
+&lt;li&gt;The hardest part was to think about the database interaction. I found it very challenging to try and separate the components of the API along with the database. However, thinking hard about this helped me solidify my understanding of OLAP vs OLTP.&lt;/li&gt;
+&lt;li&gt;The model selected for deployment made it hard to think about scale since it is a static problem from which we cannot get more data for improvement of the model, only more complex feature engineering with the embedded risk of overfitting.&lt;/li&gt;
+&lt;li&gt;Lack of familiarity with API deployment and proper testing of these. Not entirely sure about the proper tests required as part of an API, but feels like a low-hanging-fruit to implement in a next iteration.&lt;/li&gt;
+&lt;li&gt;Understanding the Git Workflow, other than simply creating the branches to add pieces of the application. I could improve my knowledge about collaboration with distributed teams: feature branches that depend on each other, merging strategies, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;takeaways&#34;&gt;Takeaways&lt;/h2&gt;
+&lt;p&gt;I have become a firm believer that in order to learn something well, you need to face it and do it. Reading and watching tutorials will only get you so far. It is amazing how much I got out of this small project and how I can start to think about transitioning more into an MLOps role.&lt;/p&gt;
+&lt;p&gt;In my humble and ignorant opinion, this has nothing to do with ML at all. It took me a few days of working in this project to realize I was doing backend engineering but maybe I&amp;rsquo;m wrong. Yes, the model quality and the data preparation steps are critical to the overall deployment performance of an inference API, but there are so many more components that are not easily taught through classic textbook examples.&lt;/p&gt;
+&lt;p&gt;In addition, many of the evaluation and monitoring of a model are concepts that as far as my experience and knowledge goes, is also a recent topic of research and application. Yes, there are many tools available but as a person trying to grow and learn this only leads to vendor and option anxiety. More and more am I convinced about learning the fundamental concepts first to then go with the tool that suits the needs of the problem.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;I&amp;rsquo;d like to see how this plays out in a Cloud Environment. What are the tools for this? What is a common architecture? How would I handle the costs?
+I have deployed some Docker images for R Shiny applications in the past, but this is a different animal for which the resources available are a bit overwhelming.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I am eager to integrate better tests. Not just unit tests for features but a robust data quality testing strategy, integration tests, etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Implement monitoring of predictions. Again, hard to do in this snapshot data problem but may be a good exercise to try out what sort of metrics I would monitor and how.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Setup a CI/CD with Github actions. I have worked on GitLab for our internal projects and would like to understand how is different.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add the Features to the SQLite database. Although not entirely called for in this small, static dataset project I would be very interested in learning how to engineer Feature Stores for when you need new data daily.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Find a topic of interest or another data set which could be potentially more dynamic to do retraining or model improvement via feature engineering once the infrastructure is setup. This right now seems miles away, I have so many questions on how to do this. Perhaps I should ask a Data Engineer ;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;conclussion&#34;&gt;Conclussion&lt;/h2&gt;
+&lt;p&gt;This last one could be bigger than just that. I&amp;rsquo;d love to be able to choose a problem of my interest and collect some data. But I have to confess, seems a but overwhelming. It is hard to choose a topic. There are many things am interested in but none for which collecting data seems doable. Yes, I could scrape or find APIs, but I am talking about my lack for subject matter expertise on these things so it is difficult to determine common or even relevant questions that a predictive model can solve.&lt;/p&gt;
+&lt;p&gt;Another thing is I don&amp;rsquo;t want to focus so much on models. There are a few things that have come to mind in terms of potential projects, eg. financial data. Currently I&amp;rsquo;m working on another personal project (more focused on Data Engineering) and there is a plenty of data with lots of possibilities. However, I know very little of Time Series and ML and Financial Models, etc. Never to late to learn but for the purpose of learning MLOps feels like a stretch.&lt;/p&gt;
+&lt;p&gt;After working a few weeks on this I am happy to share this journey with you. As I get some free time on my hands I will continue to update and improve on this repo with all things I&amp;rsquo;d like to integrate. In the meantime, I am happy with the result (well, the API works). This is fun and as mentioned above, it is the best way for me to learn about something, trial and error.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>On Data Science Roles...</title>
       <link>https://ilanreinstein.github.io/post/on-data-science-roles/</link>
       <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://ilanreinstein.github.io/post/on-data-science-roles/</guid>
-      <description>&lt;p&gt;For the past few days I have been bashing my head against the wall as to where do I fit in the big world of data science. I consider myself a data scientist, and have been doing so for the most part of my career (7-ish years or so). But lately, ever since my title changed, my role and tasks are somewhere in a bizarre transition, or better, in an constantly-evolving void of multifaceted responsibilities which I struggle to put on a piece of paper, therefore making it hard to determine where to focus in my career development endeavors. This is in no way a rant or a complain, I simply thought it was a good moment to express my opinions of the current inventory of roles after a few years in the field.&lt;/p&gt;
+      <description>&lt;p&gt;Recently, I have been bashing my head against the wall as to where do I fit in the big world of data science. I consider myself a data scientist, and have been doing so for the most part of my career (7-ish years or so). But lately, ever since my title changed, my role and tasks are somewhere in a bizarre transition, or better, in an constantly-evolving void of multifaceted responsibilities which I struggle to put on a piece of paper, therefore making it hard to determine where to focus in my career development endeavors. This is in no way a rant or a complain, I simply thought it was a good moment to express my opinions of the current inventory of roles after a few years in the field.&lt;/p&gt;
 &lt;p&gt;In a previous post of this blog, I wrote about how I moved from a physics degree to data science in higher education. I started off as an Associate Research Scientist: a fancy title that helped me put my name and see my contributions on multiple peer-reviewed papers, something I am very proud of. A few years later, I got my promotion and a title change to something that was odd to me at first, but with time it has started to stick with me, the infamous Data Science Engineer role.&lt;/p&gt;
 &lt;p&gt;What is a Data Science Engineer?&lt;/p&gt;
 &lt;p&gt;I have been asked about this in multiple conversations with people in the data space, and I always end up feeling like I could have explained it a bit better.&lt;/p&gt;
@@ -70,7 +133,8 @@
 &lt;p&gt;Neither and all of them. On a daily basis, I can go from crafting some interesting visuals for a paper, poster, or dashboard. The next day I am monitoring our ML pipelines and fixing the features store or codebase in case there are errors on the batch run from the night before. Some afternoons I see myself opening a stats book trying to remember how to interpret a logistic regression, or how to perform propensity score matching for a specific ad-hoc request from a stakeholder. In my free time, I troubleshoot and develop R Shiny applications as a freelancer, and I do everything from making a button work to putting the app on AWS for publication and sharing.&lt;/p&gt;
 &lt;p&gt;Now here&amp;rsquo;s the problem. A data scientist by paper is focused primarily on building cool models, training algorithms in a Jupyter notebook, or reading a recent paper on some new fancy neural network architecture, I am not that person, but have been time to time. A data analyst crafts dashboards and know metrics well enough to build engaging reports after arduous data transformation work done in SQL (mostly). A Machine Learning Engineer may come more frequently from the Software Development space, with a broader knowledge on architecture, infrastructure, and super focused on more than classic statistical learning to include deep learning concepts. Finally, a data engineer focuses on building data pipelines, data models, and allocating resources usually on the cloud. This kind of profile is the one you&amp;rsquo;d hired 10 years ago for &amp;ldquo;Big Data&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;So now, back to our original question: Who am I? Why am I here? I have been exposed to many of the above &amp;ldquo;job responsibilities&amp;rdquo; to a certain degree. My role has varied by project, by business need, and by employer. I would probably attribute this to the fact that I started in data when there was still no clear definition of roles. This I take as both an advantage and a liability. On the brighter side, I have developed a set of skills that allow me to refer to myself as a Swiss Army knife of data. I can talk to different people within my organization and understand the technical jargon, which then allows me to translate easily to non-technical stakeholders and other teams. The down side, I haven&amp;rsquo;t fully developed a single path so I can continue growing with the proper focus, nor have I been capable of promoting my contributions other than say&lt;/p&gt;
-&lt;p&gt;At first, as many junior data scientists, I was obsessed with advanced mathematics and their application to real-world problems. I have been lucky enough to work on a variety of projects involving complex concepts from psychometric theory and advanced statistics; the math has been there by my side and the I have witnessed my impact on tangible problems. However, as time went by, I started to feel like many of my contributions were only limited to literature and academic discussions.&lt;/p&gt;
+&lt;p&gt;At first, as many junior data scientists, I was obsessed with advanced mathematics and their application to real-world problems. I have been lucky enough to work on a variety of projects involving complex concepts from psychometric theory and advanced statistics; the math has been there by my side and I have witnessed my impact on tangible problems. However, as time went by, I started to feel like many of my contributions were only limited to literature and academic discussions. I was slow at delivering value and outcomes because I was highly insecure about the rigor or sophistication of my work. It was at that point when I decided to focus on building stuff however imperfect, incomplete, buggy or raw it may be I just needed to put things out there.&lt;/p&gt;
+&lt;p&gt;After a few months of prototyping multiple R Shiny apps and integrating cleaner code in my existing pipelines I decided to focus on moving away from the classic Data Scientist role onto a more engineering-heavy position. Many of the skills required to succeed as a ML or Data engineer come from having solid CS foundations, something a Physics degree or a data science position rarely will prepare you for. So, was this a smart move? Maybe not, as I knew I&amp;rsquo;d be climbing a steep learning curve. To be fair, my journey to become a data scientist was not short of challenges and rabbit holes, but at least the research and stats required to thrive was more &amp;ldquo;familiar&amp;rdquo; coming from physics.&lt;/p&gt;
 &lt;p&gt;To be continued &amp;hellip;.&lt;/p&gt;
 </description>
     </item>

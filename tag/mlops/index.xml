@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects | Ilan Reinstein</title>
-    <link>https://ilanreinstein.github.io/project/</link>
-      <atom:link href="https://ilanreinstein.github.io/project/index.xml" rel="self" type="application/rss+xml" />
-    <description>Projects</description>
+    <title>MLOps | Ilan Reinstein</title>
+    <link>https://ilanreinstein.github.io/tag/mlops/</link>
+      <atom:link href="https://ilanreinstein.github.io/tag/mlops/index.xml" rel="self" type="application/rss+xml" />
+    <description>MLOps</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ilanreinstein.github.io/media/icon_hub1d11bc70e03781f784a7270814f1676_20092_512x512_fill_lanczos_center_3.png</url>
-      <title>Projects</title>
-      <link>https://ilanreinstein.github.io/project/</link>
+      <title>MLOps</title>
+      <link>https://ilanreinstein.github.io/tag/mlops/</link>
     </image>
     
     <item>
@@ -73,38 +73,6 @@ I have deployed some Docker images for R Shiny applications in the past, but thi
 &lt;p&gt;Another thing is I don&amp;rsquo;t want to focus so much on models. There are a few things that have come to mind in terms of potential projects, eg. financial data. Currently I&amp;rsquo;m working on another personal project (more focused on Data Engineering) and there is a plenty of data with lots of possibilities. However, I know very little of Time Series and ML and Financial Models, etc. Never to late to learn but for the purpose of learning MLOps feels like a stretch.&lt;/p&gt;
 &lt;p&gt;After working a few weeks on this I am happy to share this journey with you. As I get some free time on my hands I will continue to update and improve on this repo with all things I&amp;rsquo;d like to integrate. In the meantime, I am happy with the result (well, the API works). This is fun and as mentioned above, it is the best way for me to learn about something, trial and error.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Uber Data Modeling Project</title>
-      <link>https://ilanreinstein.github.io/project/uber-data-modeling-project/</link>
-      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://ilanreinstein.github.io/project/uber-data-modeling-project/</guid>
-      <description>&lt;p&gt;This is another project that I recently added to my learning portfolio. Thanks to Darshil Parmar&amp;rsquo;s video for the inspiration and the skeleton to get this project up and running. For anyone interested in seeing Data Engineering projects in action, please follow Darshil for more content.&lt;/p&gt;
-&lt;h2 id=&#34;what-the-project-is-about&#34;&gt;What the project is about?&lt;/h2&gt;
-&lt;p&gt;The project consists in using a data sample of Uber rides to create a very simple star schema to do analytics on. Darshil breaks down each of the tasks very well so it is pretty easy to follow. In addition to showing how to build each of the data model&amp;rsquo;s components, he goes on to show how to setup a basic infrastructure on Google Cloud. For orchestration he uses Mage, which I had heard about but since I was first introduced to Airflow, I never dedicated much attention to it. I have to say, I really enjoyed working on it. At least for an &amp;ldquo;easy&amp;rdquo; task such as the one worked in the toy project, I got to see the potential of such tool and how nice it is to build pipelines.&lt;/p&gt;
-&lt;h2 id=&#34;what-i-learned&#34;&gt;What I learned?&lt;/h2&gt;
-&lt;h3 id=&#34;data-modeling&#34;&gt;Data Modeling&lt;/h3&gt;
-&lt;p&gt;The data model Darshil presents is very simple yet useful as a toy example for entry-level engineers like myself. I also did some modifications to the model given the way Polars handles the joins as opposed to Pandas, and also because I tried really hard to understand each step of the way in creating the Facts and Dimensions. For example, Darshil uses a main  key in the original table which he then uses to join with all dimensions. This seemed to work in Pandas because of the keys in both tables are preserved after the join, somthing that does not happen in Polars. Therefore, I had to revisit previous bootcamp projects to understand how to perform the final join that produces the Fact Table.&lt;/p&gt;
-&lt;p&gt;If I understood correctly, I created surrogate keys for each dimension table and then I joined the resulting fact table not on these keys, but on the data fields. E.g., for Payment Type Code Dimension, I created the &lt;code&gt;payment_type_id&lt;/code&gt; variable for each unique row, and then I combined with the Fact table using the actual &lt;code&gt;payment_type_name&lt;/code&gt;, which is the only resulting column common to both Fact and Dim in this case. Again, not sure if this is the right way, but based on the way Polars handles the joins, I was left with this approach.&lt;/p&gt;
-&lt;p&gt;As a consequence, I had to eliminate Location Dimensions (Lat and Long) since I would have been joining on floats. These are the main differences with what Darshil presented. I was a bit confused for a moment, but I relied on previous projects to make some progress in the project.&lt;/p&gt;
-&lt;h3 id=&#34;tools&#34;&gt;Tools&lt;/h3&gt;
-&lt;p&gt;I got to interact with a few new tools which I had never used before like Mage. It was pretty straightforward to deploy and setup the UI, plus it takes care of adding some simple tests to your code, which is nice and instructional.&lt;/p&gt;
-&lt;p&gt;I decided to add a twist to the whole project and take Polars for a test drive. This is a newer data manipulation package in Python which has been gaining popularity and traction among my LinkedIn connections, that is why I decided to try it out. It has very similar feel to PySpark, something I really enjoyed over the few hours I spent building the ETL. I can see why people are moving away from Pandas and going to Polars, it is way faster. I did not do any proper benchmark with big size data or any comparison in performance but it is cool to see a library performing that well.&lt;/p&gt;
-&lt;p&gt;I was already familiar with GCP, but as everything in life, repetition and practice are key. Seeing another example at play and understanding what each component means was a great learning experience.&lt;/p&gt;
-&lt;h2 id=&#34;next-up&#34;&gt;Next up&lt;/h2&gt;
-&lt;p&gt;Getting these foundations for more complex projects is highly rewarding. It is only up to now that I found some bandwidth to sit down and try to be consistent with my journey to become a better data engineer.&lt;/p&gt;
-&lt;p&gt;I like taking baby steps in the learning process, I find that doing this early on compounds quicker to larger projects and experience.&lt;/p&gt;
-&lt;p&gt;I will now move this exact same pipeline to AWS, and instead of Mage I will revisit Airflow.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Kaggle Survey 2019 Analysis</title>
-      <link>https://ilanreinstein.github.io/project/kaggle-survey-2019/kaggle-survey-2019-latin-america-ml-community/</link>
-      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://ilanreinstein.github.io/project/kaggle-survey-2019/kaggle-survey-2019-latin-america-ml-community/</guid>
-      <description></description>
     </item>
     
   </channel>
