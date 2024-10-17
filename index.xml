@@ -5,7 +5,7 @@
     <link>https://ilanreinstein.github.io/</link>
       <atom:link href="https://ilanreinstein.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Ilan Reinstein</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ilanreinstein.github.io/media/icon_hub1d11bc70e03781f784a7270814f1676_20092_512x512_fill_lanczos_center_3.png</url>
       <title>Ilan Reinstein</title>
@@ -51,6 +51,48 @@
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Value Investing and Data Engineering</title>
+      <link>https://ilanreinstein.github.io/project/value-investing-and-data-engineering/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://ilanreinstein.github.io/project/value-investing-and-data-engineering/</guid>
+      <description>&lt;p&gt;So this has been in the back of my mind for a couple of years now. It all started in 2021, after all those months of lockdown with little to do but work and learn new things. I noticed that Data Engineering was becoming a thing, the &amp;ldquo;new hot data job&amp;rdquo;, and my read on the room was that this was only going to grow. I was aware of how much companies were rushing to the ML wave without having proper data infrastructure so I thought it would be an opportunity to get ahead and compete for these roles. Finally, I stopped being interested in doing applied stats and research, and during those covid months I realized how interested and efficient I was at data transformation, no wonder I spent a lot of time cleaning data for stats and an ML.&lt;/p&gt;
+&lt;p&gt;I started reading about the topic, learning about the tools and concepts that a data engineer should know. After a few weeks, I found Udacity&amp;rsquo;s Nanodegree on Data Engineering. I won&amp;rsquo;t go into a long review of the certification so here&amp;rsquo;s the TL;DR version: I found it very helpful and it was just what I needed at the time to organize some ideas in my head and focus on my next steps. I got hands-on exposure to tools and fired up a million more questions in my head.&lt;/p&gt;
+&lt;p&gt;Years went by I was still unsatisfied with my learning and my growth. Not been able to break into the field after months of trying and reading content from experts with no practical experience gained was adding up to my frustration. It was one night though, while reading a book on basics of investing that I got an idea. Wouldn&amp;rsquo;t it be a cool project to build a simple dashboard that captures relevant metrics that a value investor uses? I saw this as a win-win. I could learn data engineering while at the same time gaining some confidence to start investing in the stock market.&lt;/p&gt;
+&lt;h2 id=&#34;project-goal&#34;&gt;Project Goal&lt;/h2&gt;
+&lt;p&gt;So the goal of this project consists in finding a data source (preferably free API) and build a pipeline that feeds into an analytics-ready table.&lt;/p&gt;
+&lt;h2 id=&#34;architecture-or-setup&#34;&gt;Architecture or Setup&lt;/h2&gt;
+&lt;p&gt;Since this is first time, I wanted to keep things simple enough so I don&amp;rsquo;t get caught in the midst of troubleshooting or debugging tools.
+For scheduling and executing the pipelines I decided to go with Airflow. It seems to remain as the industry standard for many and has enough support and documentation online. I am running the standalone version of it on my local machine but I am using AWS for storage and eventually hosting the UI.&lt;/p&gt;
+&lt;p&gt;For dumping raw data and creating a staging layer I am using AWS S3. Again, no particular reason other than familiarity and the fact that I have done other projects on GCP Cloud Storage.&lt;/p&gt;
+&lt;h2 id=&#34;etl-or-pipeline&#34;&gt;ETL or Pipeline&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Data Source: There are many useful and rich APIs for financial data. Mostly focus on stock price and those higher frequency data and we&amp;rsquo;re interested in Financials or Fundamentals of a company. As you ay imagine there are a lot of paid APIs with super rich data, and those that are free impose rate limits. The winner for me is&lt;a href=&#34;https://www.alphavantage.co&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Alpha Vantage&lt;/a&gt;. The free tier does give me historical data but I am limited to 25 call per day; more on that later. As a starting point, I will only collect data for companies in the SP500. To vuild the dashboard I need to get Income Statement, Balance Sheet, Cash Flow and Earnings reports, four endpoints.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Given the limit on calls to the API, I took this not as a problem but an opportunity to work my way through a problem that may appear in the real world of Data Engineering. So in order to fill my &amp;ldquo;data warehouse&amp;rdquo; with financial statements from 500 companies the pipeline would have to respect and keep track of how many calls it has done per day. Since I need to hit four endpoints per company, I can only process six companies per day, therefore my pipeline will complete (if nothing breaks and I don&amp;rsquo;t spend all that time troubleshooting) in approximately 80 days, just in time for holidays.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For each company I dump each of the four raw JSONs into S3. I then load these and combined them into a single table (one per endpoint) and store this as a Parquet file in the Staging layer. Finally, and this is where I am right now, I compute the metrics of interest to present in the dashboard. This step requires a bit more time, as I know almost nothing about Value Investing, other than understanding a few key terms here and there. For data frames in Python I am using Polars. I am not as proficient as in Pandas but hey, this is a learning project and cleaning a table with another library/package only adds value to my journey.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once I have the metrics, I will use DuckDB as a portable data warehouse with a clean table ready to use for visualization (TBD). I am planning on using Streamlit for the UI and putting it on AWS for sharing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;There are not particular reasons as to why I chose some of the technologies in my pipeline, I just spend a lot of time reading about what other Data Engineers do and what are common denominators for simple batch processes.&lt;/p&gt;
+&lt;h2 id=&#34;challenges&#34;&gt;Challenges&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The constraint for API call limits pointed me to look at XCom variables in Airflow, something I never heard of before or don&amp;rsquo;t rememebr from my Udacity days. Trying to make these work has taken a lot of time and troubleshooting&lt;/li&gt;
+&lt;li&gt;Setting up Airflow locally. I played around with different approaches and always aim to go the Docker route. However, I wanted to get the ball rolling quick due to my impatience to get my hands dirty and trying things out. Astronomer looked nice, but didn&amp;rsquo;t work for me (my fault most likely).&lt;/li&gt;
+&lt;li&gt;The workflow of updating the script, parsing it again in Airflow, clearing tasks and running again is a bit cumbersome. I would love to hear what more advanced people do to tackle this, or what workflows are recommended to avoid this.&lt;/li&gt;
+&lt;li&gt;Data Modeling. This one is the biggest stone in my shoe. I find data modeling one of the most interesting parts of this and learning about it hasn&amp;rsquo;t been a walk in the park. I have not read Kimball or Inmon, but I know the basic concepts from my previous bootcamp/nanodegree. For some reason though, thinking about it in practice always feels complicated. Will keep on practicing to get better.&lt;/li&gt;
+&lt;li&gt;Cloud Computing. My experience has mostly been focused on internal servers so understanding what services will I need to deploy will be an interesting endeavor, considering that I will need to keep costs as low as possible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results-coming-soon&#34;&gt;Results (coming soon..)&lt;/h2&gt;
 </description>
     </item>
     
